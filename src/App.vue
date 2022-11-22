@@ -1,13 +1,16 @@
 <template>
+  <Menu/>
   <router-view/>
 </template>
 
 <script>
-import LoginComponent from "./components/login"
+import Login from "./components/login"
+import Menu from "./components/menu"
 
 export default {
   components:{
-    LoginComponent
+    Login,
+    Menu
   }
 }
 </script>
