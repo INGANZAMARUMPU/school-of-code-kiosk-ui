@@ -1,5 +1,5 @@
 <template>
-  <LoginComponent/>
+  <router-view/>
 </template>
 
 <script>

@@ -10,12 +10,21 @@
         <label for=password>Password</label>
         <input id=password type="text" placeholder="password">
       </div>
-      <button>se connecter</button>
+      <button @click="koraUmuti">
+        se connecter
+      </button>
     </div>
   </div>
 </template>
 
 <script>
+export default {
+  methods:{
+    koraUmuti(){
+      window.location = "https://hogi.bi"
+    }
+  }
+}
 </script>
 
 <style scoped>
