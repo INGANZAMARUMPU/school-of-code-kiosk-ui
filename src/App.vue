@@ -1,19 +1,13 @@
 <template>
-  <h1>SCHOOL OF CODE KIOSK MANAGEMENT SYSTEM</h1>
-  <Login></Login>
-  <Login/>
-  <Login/>
-  <Login/>
-  <Login/>
-  <Login/>
+  <LoginComponent/>
 </template>
 
 <script>
-import Login from "./components/login"
+import LoginComponent from "./components/login"
 
 export default {
   components:{
-    Login
+    LoginComponent
   }
 }
 </script>
