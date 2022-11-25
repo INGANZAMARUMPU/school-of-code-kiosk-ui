@@ -1,19 +1,8 @@
 <template>
-  <Menu/>
-  <router-view/>
+  <ion-app>
+    <ion-router-outlet/>
+  </ion-app>
 </template>
-
-<script>
-import Login from "./components/login"
-import Menu from "./components/menu"
-
-export default {
-  components:{
-    Login,
-    Menu
-  }
-}
-</script>
 
 <style src="./style.css">
 </style>

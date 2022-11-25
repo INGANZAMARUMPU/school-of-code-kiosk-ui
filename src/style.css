@@ -4,24 +4,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  height: 100vh;
-}
-h1{
-  color: cadetblue;
-}
-.field>*{
-  display: block;
-  width: 100%;
-}
-.field{
-  margin-bottom: 10px;
-}
-input{
-  padding: 5px 15px;
-  font-size: 1.2em;
-}
-button{
-  padding: 5px 15px;
-  font-size: 1.2em;
-}
