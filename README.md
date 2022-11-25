@@ -73,10 +73,10 @@ app.mount('#app');
       <ion-toolbar>
         <ion-title>URUFATANAMENDE</ion-title>
       </ion-toolbar>
-      <ion-content class="ion-padding">
-        Kaze m'URUFATANAMENDE
-      </ion-content>
     </ion-header>
+	<ion-content class="ion-padding">
+		Kaze m'URUFATANAMENDE
+	</ion-content>
   </ion-page>
 </template>
 
