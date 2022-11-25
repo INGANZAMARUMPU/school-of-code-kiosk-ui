@@ -1,17 +1,15 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import Produits from "../views/Produits"
-import Achats from "../views/Achats"
-import Ventes from "../views/Ventes"
+import Vue from 'vue'
+import { createRouter, createWebHistory } from '@ionic/vue-router';
+import { RouteRecordRaw } from 'vue-router';
+import Home from '../views/Home.vue'
 
 const routes = [
-  {path:'/produits', name:"produits", component:Produits},
-  {path:'/achats', name:"achats", component:Achats},
-  {path:'/ventes', name:"ventes", component:Ventes},
+  { path: '/', name: 'Home', component: Home},
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes
+  history: createWebHistory(process.env.BASE_URL),
+  routes,
 })
 
 export default router

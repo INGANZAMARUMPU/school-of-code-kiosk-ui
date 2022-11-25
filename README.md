@@ -13,7 +13,7 @@ ou  en une ligne
 ```
 yarn add @ionic/vue @ionic/vue-router @vue/compat core-js
 ```
-2) dans le fichier ionic vue scaffold on ajoute dans l'objet json
+2) dans le fichier package.json on ajoute dans l'objet json
 
 ```json
   "jest": {
