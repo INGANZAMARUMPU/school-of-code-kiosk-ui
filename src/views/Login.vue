@@ -8,7 +8,7 @@
                 <ion-input
                   :clear-input="true"
                   placeholder="Votre nom d'utilisateur SVP"
-                  @ionChange="e => nom = e.target.value"
+                  @ionChange="e => username = e.target.value"
                   />
               </ion-item>
               <ion-item>
@@ -17,7 +17,7 @@
                   type="password"
                   :clear-input="true"
                   placeholder="Votre mot de passe SVP"
-                  @ionChange="e => nom = e.target.value"
+                  @ionChange="e => password = e.target.value"
                   />
               </ion-item>
               <ion-button
@@ -31,15 +31,27 @@
     </ion-page>
 </template>
 <script>
+import axios from 'axios'
+
 export default {
   data(){
     return {
-
+      username: "",
+      password: ""
     }
   },
   methods:{
     seConnecter(){
-      this.$store.state.user = "ikintu"
+      let data = {
+        "username": this.username,
+        "password": this.password
+      }
+      axios.post('http://127.0.0.1:8000/login/', data)
+      .then((response) => {
+        this.$store.state.user = response.data
+      }).catch((error) => {
+        console.error(error);
+      })
     }
   }
 }
