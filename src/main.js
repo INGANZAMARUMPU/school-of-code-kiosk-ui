@@ -8,7 +8,7 @@ import {
 } from '@ionic/vue';
 import '@ionic/core/css/ionic.bundle.css'
 
-const app = createApp(App).use(IonicVue).use(router);
+const app = createApp(App).use(IonicVue).use(router).use(store);
 
 app.component("IonRouterOutlet", IonRouterOutlet)
 app.component("IonApp", IonApp)
