@@ -1,6 +1,6 @@
 <template>
   <ion-app>
-    <Login v-if="!$store.state.user"/>
+    <Login v-if="$store.state.user == null"/>
     <div v-else>
       <ion-router-outlet/>
     </div>

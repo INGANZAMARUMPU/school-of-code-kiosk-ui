@@ -37,7 +37,7 @@ export default {
   methods:{
     saluer(){
       this.salutation = `BONJOUR ${this.nom}`
-    }
+    },
   }
 }
 </script>
