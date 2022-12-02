@@ -6,38 +6,45 @@
             </ion-toolbar>
         </ion-header>
         <ion-content>
-            <ion-item>
-                <ion-label position="floating">Witwa nde?</ion-label>
-                <ion-input
-                  :clear-input="true"
-                  placeholder="Votre nom SVP"
-                  @ionChange="e => nom = e.target.value"
-                  />
-            </ion-item>
-            <br>
-            <ion-button @click="saluer">
-              Saluer
-            </ion-button>
-            <br>
-            <br>
-            <ion-col>
-              {{ salutation }}
-            </ion-col>
+          <div>
+            <Produit
+              v-for="produit in produits"
+              :item="produit"/>
+          </div>
         </ion-content>
     </ion-page>
 </template>
 <script>
+import axios from 'axios'
+import Produit  from '../components/produit'
+
 export default {
+  components: {
+    Produit
+  },
   data(){
     return {
-      salutation:'',
-      nom:''
+      produits:[]
     }
   },
   methods:{
-    saluer(){
-      this.salutation = `BONJOUR ${this.nom}`
+    fetchProduits(){
+      let headers = {
+        headers: {
+          'Authorization': `Bearer ${this.$store.state.user.access}`
+        }
+      }
+      axios.get('http://127.0.0.1:8000/produits/', headers)
+      .then((response) => {
+        this.produits = response.data
+      }).catch((error) => {
+        this.produits = []
+        console.error(error);
+      })
     },
+  },
+  mounted(){
+    this.fetchProduits()
   }
 }
 </script>
